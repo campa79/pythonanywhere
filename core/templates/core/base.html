@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!-- <h2>Inicio</h2> -->
+	<ul>
+		<li><a href="{% url 'home' %}">INICIO</li>
+		<li><a href="{% url 'products' %}">PRODUCTOS</li>
+
+		<!-- Template Tag para ver si el usuario esta logueado -->
+		{% if request.user.is_authenticated %}
+		<li><a href="{% url 'exit' %}">SALIR</a></li>
+		{% else %}
+		<li><a href="{% url 'login' %}">INGRESAR</a></li>
+		{% endif %}
+	</ul>
+
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+	{% block content %}
+
+	<h3>INICIO</h3>
+	
+		<!-- Template Tag para ver si el usuario esta logueado -->
+{% if request.user.is_authenticated %}
+	<hr>
+
+	<h4>
+		{{ user.username | upper }}, Bienvenido
+	</h4>
+{% endif %}
+	
+{% endblock %}
