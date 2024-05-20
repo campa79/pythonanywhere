@@ -9,16 +9,17 @@
 
 	<div class="card mx-auto" style="width: 30rem;">
 	  <div class="card-body">
-	    <h5 class="card-title">Ingresar User/Pass</h5>
-	    <h6 class="card-subtitle mb-2 text-body-secondary">Bienvenidos a PP4 - IFTS18 / Desarrollo De Software</h6>
+	    <h5 class="card-title">Complete el Formulario de Registro</h5>
+	    <h6 class="card-subtitle mb-2 text-body-secondary">Aviso: Completar TODOS los campos.</h6>
 
 		{{ form | crispy }}
-	    <button type="submit">Iniciar Sesión</button>
+	    <button type="submit">Registrarse</button>
 
 	    <br><br>
 
 	    <a href="{% url 'home' %}" class="card-link">Inicio</a>
 	    <a href="{% url 'register' %}" class="card-link">Registrarse</a>
+	    <a href="{% url 'login' %}" class="card-link">Iniciar Sesión</a>
 	  </div>
 	</div>
 </form>
